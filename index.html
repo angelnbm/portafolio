@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://i.postimg.cc/9fqYVvxh/logo.png" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <aside class="sidebar " data-sidebar>
+            <div class="sidebar-info">
+                <figure class="avatar-box">
+                    <img src="avatar.png" alt="avatar" width="80">
+                </figure>
+
+                <div class="info-content">
+                    <h1 class="name" title="Angel Bravo">Angel Bravo Muñoz</h1>
+                    <p class="title">Estudiante</p>
+                </div>
+
+                <button class="info-more-btn" data-sidebar-btn>
+                    <span>Contactos</span>
+                    <ion-icon name="chevron-down"></ion-icon>
+                </button>
+            </div>
+
+            <div class="sidebar-info-more">
+                <div class="separator"></div>
+
+                <ul class="contacts-list">
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Email</p>
+
+                            <a href="mailto:nicobravom123@gmail.com" class="contact-link">nicobravom123</a>
+                        </div>
+                    </li>
+
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Telefono</p>
+
+                            <a href="tel:+56934461221" class="contact-link">+569 34461221</a>
+                        </div>
+                    </li>
+
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Cumpleaños</p>
+
+                            <time datetime="2002-07-20">20 de Julio 2002</time>
+                        </div>
+                    </li>
+
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Ubicacion</p>
+
+                            <address>Teno, Maule, Chile</address>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="separator"></div>
+
+                <ul class="social-list">
+                    <li class="social-item"><a target="_blank" href="https://www.linkedin.com/in/angel-bravo-muñoz-066449325/" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                    <li class="social-item"><a target="_blank" href="https://github.com/angelnbm" class="social-link"><ion-icon name="logo-github"></ion-icon></a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="main-content">
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li class="navbar-item"><button class="navbar-link active" data-nav-link>Yo</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Académico</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Portafolio</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Contacto</button></li>
+                </ul>
+            </nav>
+
+            <article class="about active" data-page="yo">
+                <header>
+                    <h2 class="h2 article-title">Sobre mi</h2>
+                </header>
+
+                <section class="about-text">
+                    <p>Soy una persona resiliente, con una actitud proactiva hacia el
+                        aprendizaje y la superación. Me motiva la posibilidad de
+                        adquirir nuevas habilidades y sumar experiencias que me
+                        permitan crecer tanto personal como profesionalmente.
+                        Además, me caracterizo por tener una mentalidad creativa, lo
+                        que me permite aportar soluciones innovadoras y eficaces en
+                        las iniciativas que participo.</p>
+                </section>
+
+                <section class="service">
+                    <h3 class="h3 service-title">Que estoy haciendo</h3>
+
+                    <ul class="service-list">
+                        
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="https://i.postimg.cc/CZ35srCb/icon-dev1.png" alt="icon" width="40">
+                            </div>
+
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Desarrollador Web</h4>
+                                <p class="service-item-text">Desarrollando software crentrado a web buscando la major calidad a nivel de interfaces y rendimiento.</p>
+                            </div>
+                        </li>
+
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="https://i.postimg.cc/CZ35srCb/icon-dev1.png" alt="icon" width="40">
+                            </div>
+
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Desarrollador</h4>
+                                <p class="service-item-text">Desarrollando software no enfocado a web, pensando en algoritmos o aplicaciones.</p>
+                            </div>
+                        </li>
+
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="https://i.postimg.cc/qMmggS7C/Screenshot-firetruck.png" alt="icon" width="40">
+                            </div>
+
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Bombero</h4>
+                                <p class="service-item-text">LLevo 4 años desarrollandome como bombero y 1 año como secretario tratando de ser un aporte para la comunidad.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+            
+            <article class="resume " data-page="académico">
+                <header>
+                    <h2 class="h2 article-title">Estudios</h2>
+                </header>
+
+                <section class="timeline">
+                    <div class="title-wrapper">
+                        <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
+
+                        <h3 class="h3">Educación</h3>
+                    </div>
+
+                    <ol class="timeline-list">
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Universidad de Talca</h4>
+                            <span>2021 - Actualidad</span>
+                            <p class="timeline-text">En este centro académico he logrado aprender y mejorar mis habilidades tanto como programador como persona para poder desempeñarme de la mejor manera como futuro Ingeniero Civil en Computación.</p>
+                        </li>
+
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Liceo Bicentenario de Excelencia Politécnico Aquelarre</h4>
+                            <span>2019 - 2020</span>
+                            <p class="timeline-text">En este centro académico desarrollé las habilidades para obtener un título "Técnico nivel medio en Telecomunicaciones".</p>
+                        </li>
+
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Liceo Bicentenario de Excelencia Politécnico Aquelarre</h4>
+                            <span>2017 - 2020</span>
+                            <p class="timeline-text">En este centro académico desarrolle mi ensañanza media.</p>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="timeline">
+                    <div class="title-wrapper">
+                        <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
+
+                        <h3 class="h3">Experiencia</h3>
+                    </div>
+
+                    <ol class="timeline-list">
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Proyecto de monitoreo de anticopias</h4>
+                            <span>Junio 2024 </span>
+                            <p class="timeline-text">En el curso "Construcción de software" elaboramos un proyecto web para evitar copias, en el cual trabajamos en equipo en donde me desarrolle como programador utilizando HTML, CSS, Javascript, GIT, y MongoDB.</p>
+                        </li>
+
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Proyecto de servicio de streaming (“Netflix”)</h4>
+                            <span>Mayo 2023</span>
+                            <p class="timeline-text">En el curso "Metodologías de desarrollo y planificación de proyectos de software" elaboramos un proyecto web de servicios de straming similar a “Netflix”, en el cual trabajamos en equipo en donde me desarrolle como programador utilizando HTML, CSS, Javascript y Firebase.</p>
+                        </li>
+
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Proyecto transcripción de texto digital a manuscrito</h4>
+                            <span>Noviembre 2022</span>
+                            <p class="timeline-text">En el curso "Proyecto de programación" elaboramos un proyecto de transcripción de de texto digital mediante un espacio de texto el cual lo transcibimos en tiempo real a manuscrito, en el cual trabajamos en equipo en donde me desarrolle como programador utilizando Java y Git.</p>
+                        </li>
+
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Proyecto sensores para casas con arduino</h4>
+                            <span>Noviembre 2019</span>
+                            <p class="timeline-text">Durante la enseñanza media cuando estaba en la especialidad de técnico nos encomendaron un proyecto con arduino y pensamos en funciones para una casa, en el cual trabajamos en equipo en donde me desarrolle como programador en arduino.</p>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="skill">
+                    <h3 class="h3 skills-title">Mis habilidades</h3>
+
+                    <ul class="skills-list content-card">
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <h5 class="h5">Diseño Web</h5>
+                                <data value="60">60%</data>
+                            </div>
+
+                            <div class="skills-progress-bg">
+                                <div class="skills-progress-fill" style="width: 60%;"></div>
+                            </div>
+                        </li>
+
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <h5 class="h5">Trabajo En Equipo</h5>
+                                <data value="70">70%</data>
+                            </div>
+
+                            <div class="skills-progress-bg">
+                                <div class="skills-progress-fill" style="width: 70%;"></div>
+                            </div>
+                        </li>
+
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <h5 class="h5">Programador</h5>
+                                <data value="65">65%</data>
+                            </div>
+
+                            <div class="skills-progress-bg">
+                                <div class="skills-progress-fill" style="width: 65%;"></div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </section>
+            </article>
+
+            <article class="portfolio " data-page="portafolio">
+                <header>
+                    <h2 class="h2 article-title">Portafolio</h2>
+                </header>
+
+                <section class="projects">
+                    <ul class="filter-list">
+                        <li class="filter-item"><button class="active" data-filter-btn>Todo</button></li>
+                        <li class="filter-item"><button data-filter-btn>Autonomo</button></li>
+                        <li class="filter-item"><button data-filter-btn>Aplicaciones</button></li>
+                        <li class="filter-item"><button data-filter-btn>Desarrollo Web </button></li>
+                    </ul>
+
+                    <div class="filter-select-box">
+                        <button class="filter-select " data-select>
+                            <div class="select-value" data-select-value>Selecionar categoria</div>
+
+                            <div class="select-icon">
+                                <ion-icon name="chevron-down"></ion-icon>
+                            </div>
+                        </button>
+
+                        <ul class="select-list">
+                            <li class="select-item"><button data-select-item>todo</button></li>
+                            <li class="select-item"><button data-select-item>autonomo</button></li>
+                            <li class="select-item"><button data-select-item>aplicaciones</button></li>
+                            <li class="select-item"><button data-select-item>desarrollo web</button></li>
+                        </ul>
+                    </div>
+
+                    <ul class="project-list">
+                        <li class="project-item active" data-filter-item data-category="desarrollo web">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="https://i.postimg.cc/qRHpHMyd/project-1.jpg" alt="finance" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">Finance</h3>
+                                <p class="project-category">Desarrollo Web</p>
+                            </a>
+                        </li>
+
+                        <li class="project-item active" data-filter-item data-category="desarrollo web">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="https://i.postimg.cc/bNrcM2Wt/project-2.png" alt="orizon" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">Orizon</h3>
+                                <p class="project-category">Desarrollo Web</p>
+                            </a>
+                        </li>
+
+                        <li class="project-item active" data-filter-item data-category="autonomo">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="https://i.postimg.cc/jSJVqYsq/project-3.jpg" alt="fundo" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">Fundo</h3>
+                                <p class="project-category">Aplicaciones</p>
+                            </a>
+                        </li>
+
+                        <li class="project-item active" data-filter-item data-category="aplicaciones">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="https://i.postimg.cc/dtpXxNGb/project-4.png" alt="brawlhalla" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">Brawlhalla</h3>
+                                <p class="project-category">Aplicaciones</p>
+                            </a>
+                        </li>
+
+                        <li class="project-item active" data-filter-item data-category="autonomo">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="https://i.postimg.cc/43T0JKLw/project-5.png" alt="dsm." loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">DSM.</h3>
+                                <p class="project-category">Autonomo</p>
+                            </a>
+                        </li>
+
+                        <li class="project-item active" data-filter-item data-category="autonomo">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="https://i.postimg.cc/qR1DX1kZ/project-6.png" alt="metaspark" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">Metaspark</h3>
+                                <p class="project-category">Autonomo</p>
+                            </a>
+                        </li>
+
+                        <li class="project-item active" data-filter-item data-category="desarrollo web">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="https://i.postimg.cc/Kj4q9tjc/project-7.png" alt="summary" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">Summary</h3>
+                                <p class="project-category">Web Development</p>
+                            </a>
+                        </li>
+
+                        <li class="project-item active" data-filter-item data-category="aplicaciones">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="https://i.postimg.cc/rw2j4B1w/project-8.jpg" alt="task manager" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">Task Manager</h3>
+                                <p class="project-category">Applications</p>
+                            </a>
+                        </li>
+
+                        <li class="project-item active" data-filter-item data-category="desarrollo web">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="https://i.postimg.cc/7LxNsSQv/project-9.png" alt="arrival" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">Arrival</h3>
+                                <p class="project-category">Web Development</p>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+
+            <article class="contact " data-page="contacto">
+                <header>
+                    <h2 class="h2 article-title">Contacto</h2>
+                </header>
+
+                <section class="mapbox" data-mapbox>
+                    <figure>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12411.787323186645!2d-71.16194574533912!3d-34.87033571994396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses-419!2scl!4v1738820396135!5m2!1ses-419!2scl"
+                         width="400" height="300" loading="lazy"></iframe>
+                    </figure>
+                </section>
+
+                <section class="contact-form">
+                    <h3 class="h3 form-title">Formulario de Contacto</h3>
+
+                    <form action="#" class="form" id="form" data-form>
+                        <div class="input-wrapper">
+                            <input type="text" name="fullname" id="fullname" class="form-input" placeholder="Nombre" required data-form-input>
+                            <input type="email" name="email" id="email" class="form-input" placeholder="Email" required data-form-input>
+                        </div>
+
+                        <textarea name="message" id="message" class="form-input" placeholder="Mensaje" required data-form-input=""></textarea>
+
+                        <button class="form-btn" type="submit" id="boton" data-form-btn>
+                            <ion-icon name="paper-plane"></ion-icon>
+                            <span>Enviar Mensaje</span>
+                        </button>
+                    </form>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">emailjs.init('sUy98eJ1wY1Iqs1G-')</script>
+</body>
+</html>
