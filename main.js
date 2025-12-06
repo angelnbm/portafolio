@@ -9,34 +9,24 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
 sidebarBtn.addEventListener("click", function() {elementToggleFunc(sidebar); })
 
-
-//Activating Filter Select and filtering options
-
-const select = document.querySelector('[data-select]');
-const selectItems = document.querySelectorAll('[data-select-item]');
-const selectValue = document.querySelector('[data-select-value]');
-const filterBtn = document.querySelectorAll('[data-filter-btn]');
-
-select.addEventListener('click', function () {elementToggleFunc(this); });
-
-for(let i = 0; i < selectItems.length; i++) {
-    selectItems[i].addEventListener('click', function() {
-
-        let selectedValue = this.innerText.toLowerCase();
-        selectValue.innerText = this.innerText;
-        elementToggleFunc(select);
-        filterFunc(selectedValue);
-
-    });
-}
+// Portfolio filter by technology
 
 const filterItems = document.querySelectorAll('[data-filter-item]');
 
-const filterFunc = function (selectedValue) {
+// Variable para filtrado por tecnología
+let activeTechFilter = 'all';
+
+// Aplicar filtro de tecnología
+function applyFilters() {
     for(let i = 0; i < filterItems.length; i++) {
-        if(selectedValue == "todo") {
-            filterItems[i].classList.add('active');
-        } else if (selectedValue == filterItems[i].dataset.category) {
+        const itemTech = filterItems[i].dataset.tech ? filterItems[i].dataset.tech.toLowerCase() : '';
+        
+        // Verificar filtro de tecnología
+        const techMatch = activeTechFilter === 'all' || 
+                         itemTech.includes(activeTechFilter.toLowerCase());
+        
+        // Mostrar solo si el filtro coincide
+        if (techMatch) {
             filterItems[i].classList.add('active');
         } else {
             filterItems[i].classList.remove('active');
@@ -44,24 +34,7 @@ const filterFunc = function (selectedValue) {
     }
 }
 
-//Enabling filter button for larger screens 
-
-let lastClickedBtn = filterBtn[0];
-
-for (let i = 0; i < filterBtn.length; i++) {
-    
-    filterBtn[i].addEventListener('click', function() {
-
-        let selectedValue = this.innerText.toLowerCase();
-        selectValue.innerText = this.innerText;
-        filterFunc(selectedValue);
-
-        lastClickedBtn.classList.remove('active');
-        this.classList.add('active');
-        lastClickedBtn = this;
-
-    })
-}
+// Filtros de categoría removidos - ahora solo se usa filtro por tecnología
 
 // Enabling Contact Form
 
@@ -108,6 +81,7 @@ const modalCloseBtn = document.querySelector('[data-modal-close]');
 const modalTitle = document.querySelector('[data-modal-title]');
 const modalCategory = document.querySelector('[data-modal-category]');
 const modalDescription = document.querySelector('[data-modal-description]');
+const modalTechContainer = document.querySelector('[data-modal-tech]');
 const galleryContainer = document.querySelector('[data-gallery-container]');
 const prevBtn = document.querySelector('[data-gallery-prev]');
 const nextBtn = document.querySelector('[data-gallery-next]');
@@ -127,6 +101,7 @@ projectModalLinks.forEach(link => {
         const category = this.dataset.projectCategory;
         const description = this.dataset.projectDescription;
         const images = JSON.parse(this.dataset.projectImages);
+        const tech = this.dataset.projectTech;
         
         // Actualizar contenido del modal
         modalTitle.textContent = title;
@@ -134,6 +109,18 @@ projectModalLinks.forEach(link => {
         modalDescription.textContent = description;
         projectImages = images;
         currentImageIndex = 0;
+        
+        // Mostrar tecnologías
+        if (tech) {
+            const techArray = tech.split(', ');
+            modalTechContainer.innerHTML = '';
+            techArray.forEach(techName => {
+                const tag = document.createElement('span');
+                tag.className = 'tech-tag';
+                tag.innerHTML = `<ion-icon name="code-slash-outline"></ion-icon>${techName}`;
+                modalTechContainer.appendChild(tag);
+            });
+        }
         
         // Cargar imágenes en la galería
         loadGalleryImages();
@@ -208,6 +195,26 @@ function updateGalleryButtons() {
         nextBtn.classList.toggle('hidden', currentImageIndex === projectImages.length - 1);
     }
 }
+
+// Technology Filter Functionality
+const techFilterBtns = document.querySelectorAll('[data-tech-filter]');
+
+// Filtrado por tecnología
+techFilterBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+        // Remover clase active de todos los botones
+        techFilterBtns.forEach(b => b.classList.remove('active'));
+        
+        // Agregar clase active al botón clickeado
+        this.classList.add('active');
+        
+        // Obtener tecnología seleccionada
+        activeTechFilter = this.dataset.techFilter;
+        
+        // Aplicar filtros
+        applyFilters();
+    });
+});
 
 //formulario de contacto
 

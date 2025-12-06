@@ -735,6 +735,78 @@ article { display: none; }
 
 .filter-list { display: none; }
 
+/* Technology Filter Section */
+.tech-filter-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: var(--border-gradient-onyx);
+    border-radius: 16px;
+}
+
+.tech-filter-title {
+    color: var(--white2);
+    font-size: var(--fs5);
+    margin-bottom: 15px;
+    font-weight: var(--fw500);
+}
+
+.tech-filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-filter-item {
+    list-style: none;
+}
+
+.tech-filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: var(--eerie-black2);
+    border: 2px solid var(--jet);
+    border-radius: 12px;
+    color: var(--light-gray);
+    font-size: var(--fs7);
+    font-weight: var(--fw400);
+    transition: var(--transition1);
+    cursor: pointer;
+}
+
+.tech-filter-btn ion-icon {
+    font-size: 20px;
+    color: var(--light-gray);
+    transition: var(--transition1);
+}
+
+.tech-filter-btn:hover {
+    background: var(--bg-gradient-jet);
+    border-color: var(--orange-yellow-crayola);
+    color: var(--white2);
+}
+
+.tech-filter-btn:hover ion-icon {
+    color: var(--orange-yellow-crayola);
+}
+
+.tech-filter-btn.active {
+    background: var(--bg-gradient-yellow2);
+    border-color: var(--orange-yellow-crayola);
+    color: var(--white2);
+}
+
+.tech-filter-btn.active ion-icon {
+    color: var(--orange-yellow-crayola);
+}
+
+.tech-filter-btn span {
+    white-space: nowrap;
+}
+
+.filter-list { display: none; }
+
 .filter-select-box { 
     position: relative;
     margin-bottom: 25px;
@@ -1695,6 +1767,32 @@ textarea.form-input {
     color: var(--orange-yellow-crayola);
     font-size: var(--fs6);
     font-weight: var(--fw400);
+    margin-bottom: 10px;
+}
+
+.modal-tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.tech-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 12px;
+    background: var(--border-gradient-onyx);
+    border: 1px solid var(--jet);
+    border-radius: 8px;
+    color: var(--light-gray);
+    font-size: var(--fs8);
+    font-weight: var(--fw400);
+}
+
+.tech-tag ion-icon {
+    font-size: 16px;
+    color: var(--orange-yellow-crayola);
 }
 
 .modal-body {
