@@ -739,7 +739,6 @@ article { display: none; }
 .tech-filter-section {
     margin-bottom: 30px;
     padding: 20px;
-    background: var(--border-gradient-onyx);
     border-radius: 16px;
 }
 
