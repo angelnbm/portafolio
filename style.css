@@ -1718,6 +1718,30 @@ textarea.form-input {
     animation: modalFadeIn 0.3s ease;
 }
 
+/* Scrollbar personalizado para el modal */
+.modal-content::-webkit-scrollbar {
+    width: 20px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: var(--eerie-black2);
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    border: 5px solid var(--eerie-black2);
+    background: hsla(0, 0%, 100%, .1);
+    border-radius: 20px;
+    box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, .11), inset -1px -1px 0 hsla(0, 0%, 100%, .11);
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: hsla(0, 0%, 100%, .15);
+}
+
+.modal-content::-webkit-scrollbar-button {
+    height: 20px;
+}
+
 @keyframes modalFadeIn {
     from {
         opacity: 0;
