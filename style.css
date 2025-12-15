@@ -1625,8 +1625,8 @@ textarea.form-input {
     display: flex;
     align-items: center;
     gap: 10px;
-    background: var(--bg-gradient-yellow1);
-    color: var(--white1);
+    background: var(--text-gradient-yellow);
+    color: var(--smoky-black);
     padding: 12px 24px;
     border-radius: 14px;
     font-size: var(--fs6);
@@ -1636,6 +1636,7 @@ textarea.form-input {
 
 .cv-btn:hover {
     background: var(--bg-gradient-yellow2);
+    color: var(--white);
 }
 
 .cv-btn ion-icon {
